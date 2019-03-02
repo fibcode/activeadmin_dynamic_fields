@@ -159,7 +159,8 @@ function dfUpdateField() {
 }
 
 // Init
-$(document).ready( function() {
+// $(document).ready( function() {
+$(document).on('turbolinks:load', function() {
   // Setup dynamic fields
   $('.active_admin .input [data-if], .active_admin .input [data-function], .active_admin .input [data-eq], .active_admin .input [data-not]').each( function() {
     dfSetupField( $(this) );
